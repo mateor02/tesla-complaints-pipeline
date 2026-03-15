@@ -2,13 +2,14 @@ import requests
 
 models = ["MODEL Y", "MODEL 3", "MODEL S", "MODEL X"]
 years = ["2020", "2021", "2022", "2023", "2024", "2025"]
+MAKE = "TESLA"
 
-def extract():
+def extract(models: list[str], years: list[str]) -> list[dict]:
     complaints = []
     for model in models:
         for year in years:
             try:
-                base_url = f"https://api.nhtsa.gov/complaints/complaintsByVehicle?make={"TESLA"}&model={model}&modelYear={year}"
+                base_url = f"https://api.nhtsa.gov/complaints/complaintsByVehicle?make={MAKE}&model={model}&modelYear={year}"
                 r = requests.get(base_url)
                 r.raise_for_status()
                 data = r.json()
@@ -20,5 +21,5 @@ def extract():
     return complaints
 
 if __name__ == "__main__":
-    result = extract()
+    result = extract(models, years)
     print(len(result))        
