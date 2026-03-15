@@ -10,6 +10,7 @@ def create_tables():
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS complaints (
                 odi_number INT PRIMARY KEY,
+                model VARCHAR(20)
                 date_of_incident DATE, 
                 date_complaint_filed DATE,
                 components VARCHAR(40),
@@ -35,4 +36,4 @@ def create_tables():
               
 if __name__ == '__main__':
     create_tables()
-    
+
