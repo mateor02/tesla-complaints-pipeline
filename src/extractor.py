@@ -1,10 +1,11 @@
 import requests
+from validator import Complaint
 
-models = ["MODEL Y", "MODEL 3", "MODEL S", "MODEL X"]
-years = ["2020", "2021", "2022", "2023", "2024", "2025"]
+models = ["MODEL Y", "MODEL 3", "MODEL S", "MODEL X", "CYBERTRUCK", ]
+years = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]
 MAKE = "TESLA"
 
-def extract(models: list[str], years: list[str]) -> list[dict]:
+def extract(models: list[str], years: list[str]) -> list[Complaint]:
     complaints = []
     for model in models:
         for year in years:
@@ -14,7 +15,10 @@ def extract(models: list[str], years: list[str]) -> list[dict]:
                 r.raise_for_status()
                 data = r.json()
                 results = data['results']
-                complaints.extend(results)
+                for complaint in results:
+                    complaint["model"] = model
+                    validated = Complaint.model_validate(complaint)
+                    complaints.append(validated)
                 
             except requests.RequestException as e:
                 print(f"Connection Error: {e}")
