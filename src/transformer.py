@@ -1,6 +1,7 @@
 import polars as pl
 from validator import Complaint
 from extractor import extract, models, years
+
 def transform(complaints: list[Complaint]):
     complaints = [complaint.model_dump() for complaint in complaints]
     complaints_df = pl.DataFrame(complaints)

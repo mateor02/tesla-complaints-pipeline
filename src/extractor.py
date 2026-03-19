@@ -11,7 +11,7 @@ def extract(models: list[str], years: list[str]) -> list[Complaint]:
         for year in years:
             try:
                 base_url = f"https://api.nhtsa.gov/complaints/complaintsByVehicle?make={MAKE}&model={model}&modelYear={year}"
-                r = requests.get(base_url)
+                r = requests.get(base_url, timeout=10)
                 r.raise_for_status()
                 data = r.json()
                 results = data['results']

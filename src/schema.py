@@ -10,10 +10,10 @@ def create_tables():
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS complaints (
                 odi_number INT PRIMARY KEY,
-                model VARCHAR(20)
+                model VARCHAR(20),
                 date_of_incident DATE, 
                 date_complaint_filed DATE,
-                components VARCHAR(40),
+                components TEXT,
                 summary TEXT,
                 crash BOOLEAN,
                 fire BOOLEAN,
