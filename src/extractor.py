@@ -7,6 +7,7 @@ MAKE = "TESLA"
 
 def extract(models: list[str], years: list[str]) -> list[Complaint]:
     complaints = []
+    
     for model in models:
         for year in years:
             try:
@@ -22,6 +23,7 @@ def extract(models: list[str], years: list[str]) -> list[Complaint]:
                 
             except requests.RequestException as e:
                 print(f"Connection Error: {e}")
+                
     return complaints
 
 if __name__ == "__main__":

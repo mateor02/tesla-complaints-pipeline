@@ -20,5 +20,3 @@ if __name__ == "__main__":
     conn = get_connection()
     print("=== Database connection successful ===")
     conn.close()
-
-

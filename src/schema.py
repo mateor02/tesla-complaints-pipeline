@@ -4,6 +4,7 @@ from db import get_connection
 def create_tables():
     conn = None
     cursor = None
+    
     try:
         conn = get_connection()
         cursor = conn.cursor()
@@ -27,6 +28,7 @@ def create_tables():
     
     except psycopg2.DatabaseError as e:
         print(f"Error creating table: {e}")
+        
     finally:
         if cursor:
             cursor.close()
@@ -36,4 +38,3 @@ def create_tables():
               
 if __name__ == '__main__':
     create_tables()
-

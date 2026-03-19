@@ -14,4 +14,3 @@ class Complaint(BaseModel):
     fire: bool
     number_of_injuries: int | None = None
     number_of_deaths: int | None = None
-    
