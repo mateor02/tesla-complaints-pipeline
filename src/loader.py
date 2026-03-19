@@ -47,9 +47,3 @@ if __name__ == '__main__':
     raw = extract(models,years)
     cleaned = transform(raw)
     load(cleaned)
-        
-        
-
-
-
-    
