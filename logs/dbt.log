@@ -1,0 +1,31 @@
+[0m18:16:03.485285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107617980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fe4e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fe4b60>]}
+
+
+============================== 18:16:03.487616 | 68ba5273-6d82-4caa-90c3-fb3d0d3fc92a ==============================
+[0m18:16:03.487616 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:16:03.487910 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'partial_parse': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'log_format': 'default', 'printer_width': '80', 'log_cache_events': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'empty': 'None', 'profiles_dir': '/Users/mateomelgoza/.dbt', 'indirect_selection': 'eager', 'warn_error': 'None', 'target_path': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'quiet': 'False', 'static_parser': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'invocation_command': 'dbt init tesla_complaints_dbt'}
+[0m18:16:03.494846 [info ] [MainThread]: Creating dbt configuration folder at /Users/mateomelgoza/.dbt
+[0m18:16:03.495676 [debug] [MainThread]: Starter project path: /Users/mateomelgoza/Documents/tesla-complaints-pipeline/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:16:03.498848 [info ] [MainThread]: 
+Your new dbt project "tesla_complaints_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:16:03.499083 [info ] [MainThread]: Setting up your profile.
+[0m18:20:21.217335 [info ] [MainThread]: Profile tesla_complaints_dbt written to /Users/mateomelgoza/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:20:21.229761 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 257.77612, "process_in_blocks": "0", "process_kernel_time": 0.148865, "process_mem_max_rss": "107298816", "process_out_blocks": "0", "process_user_time": 0.622564}
+[0m18:20:21.231119 [debug] [MainThread]: Command `dbt init` succeeded at 18:20:21.230878 after 257.78 seconds
+[0m18:20:21.232284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fe4c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ca32c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fac440>]}
+[0m18:20:21.233533 [debug] [MainThread]: Flushing usage events
+[0m18:20:21.565370 [debug] [MainThread]: An error was encountered while trying to flush usage events
