@@ -1,0 +1,7 @@
+.env
+.git
+__pycache__
+notebooks/
+logs/
+tesla_complaints_dbt/
+tests/
